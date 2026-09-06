@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>نقشهٔ کارگاه‌ها · Tech Lab Map</title>
+<link rel="stylesheet" href="app.css"/>
+</head>
+<body>
+<div class="topbar">
+  <div class="row">
+    <button id="btnReadTop">این صفحه را خواندم</button>
+    <button id="btnNextTop">بعدیِ نخوانده</button>
+    <button id="btnOnlyUnread">فقط نخوانده‌ها</button>
+    <button id="btnReset">پاک کردن تیک‌ها</button>
+  </div>
+</div>
+<div class="app">
+<aside class="side">
+  <div class="brand">
+    <strong>Tech Lab Map</strong>
+    <small>نقشه · معماری · آدرس ریپوها</small>
+    <div class="prog"><i></i></div>
+    <small id="readCount">0</small>
+    <div class="unread-box" id="unreadBox"></div>
+  </div>
+  <div class="tabs">
+    <button class="on" data-tab="all">همه</button>
+    <button data-tab="map">نقشه</button>
+    <button data-tab="arch">معماری</button>
+    <button data-tab="canvas">خروجی</button>
+    <button data-tab="repos">ریپو</button>
+  </div>
+  <div class="grp open" data-tab="all">
+    <button>شروع</button>
+    <ul>
+      <li><a href="#start"><i class="dot"></i>این صفحه چیست</a></li>
+      <li><a href="#order"><i class="dot"></i>ترتیب پیشنهادی خواندن</a></li>
+    </ul>
+  </div>
+  <div class="grp open" data-tab="map">
+    <button>دسته‌ها</button>
+    <ul>
+      <li><a href="#cat-chat"><i class="dot"></i>تحلیل چت و داده</a></li>
+      <li><a href="#cat-mouse"><i class="dot"></i>باتری ماوس</a></li>
+      <li><a href="#cat-cf"><i class="dot"></i>کانفلوئنس</a></li>
+      <li><a href="#cat-dl"><i class="dot"></i>دایلی‌لاگ</a></li>
+      <li><a href="#cat-next"><i class="dot"></i>کارگاه‌های بعدی</a></li>
+    </ul>
+  </div>
+  <div class="grp open" data-tab="arch">
+    <button>معماری</button>
+    <ul>
+      <li><a href="#fit"><i class="dot"></i>این کارگاه‌ها چطور به هم وصل می‌شوند</a></li>
+      <li><a href="#skills"><i class="dot"></i>مهارت مشترک بین همه</a></li>
+    </ul>
+  </div>
+  <div class="grp open" data-tab="canvas">
+    <button>فرمت خروجی</button>
+    <ul>
+      <li><a href="#canvas"><i class="dot"></i>کنوس چیست و چرا فایل اشتراک‌گذاری نیست</a></li>
+      <li><a href="#htmlout"><i class="dot"></i>خروجی واقعی تو چیست</a></li>
+    </ul>
+  </div>
+  <div class="grp open" data-tab="repos">
+    <button>آدرس‌ها</button>
+    <ul>
+      <li><a href="#paths"><i class="dot"></i>مسیر محلی و گیت‌هاب</a></li>
+      <li><a href="#shortcuts"><i class="dot"></i>شورتکات‌های تکراری</a></li>
+    </ul>
+  </div>
+</aside>
+<main class="main">
+
+<article id="start">
+  <h2>این صفحه چیست</h2>
+  <div class="card">
+    <p>این یک فهرست تیتروار نیست. نقشهٔ کارگاه‌هایی است که برای هر شاخهٔ کار با هم، یک ریپوی جدا و گام‌به‌گام ساخته می‌شود؛ مثل مستر سه و چهار.</p>
+    <p>قانون: اصطلاح فنی ترجمه نمی‌شود. مسیر و دستور داخل بلوک کد می‌ماند.</p>
+  </div>
+</article>
+
+<article id="order">
+  <h2>ترتیب پیشنهادی خواندن</h2>
+  <div class="card">
+    <p class="do">اگر الان باتری ماوس رئیس مهم است، اول این را باز کن</p>
+    <pre>D:\workshops\mouse-battery-fromzero\index.html</pre>
+    <p class="do">اگر می‌خواهی همان کار تحلیل چت را خودت از صفر تمرین کنی، این را باز کن</p>
+    <pre>D:\workshops\chat-data-fromzero\index.html</pre>
+    <p>لایه ۱. ماوس کار عملی همان روز است. چت کارگاه مهارتی بلندتر است.</p>
+    <p>لایه ۲. کانفلوئنس و دایلی‌لاگ از قبل وجود دارند؛ اینجا فقط به آن‌ها لینک می‌دهیم، دوباره از صفر نمی‌نویسیم.</p>
+  </div>
+</article>
+
+<article id="cat-chat">
+  <h2>تحلیل چت و داده</h2>
+  <div class="card">
+    <p>خط لوله:</p>
+    <pre>متن خام چت
+→ خواندن فایل
+→ canon اسم‌ها
+→ لیست پیام‌ها
+→ شمارش واژه
+→ دسته
+→ مدت ویس
+→ داشبورد HTML + Chart.js</pre>
+    <p>دادهٔ تمرین داخل ریپو است تا لازم نباشد پی‌دی‌اف واقعی را اول کار بیاوری. فصل اختیاری پی‌دی‌اف و</p>
+    <code>PyMuPDF</code>
+    <p>جداگانه است.</p>
+    <pre>D:\workshops\chat-data-fromzero</pre>
+  </div>
+</article>
+
+<article id="cat-mouse">
+  <h2>باتری ماوس</h2>
+  <div class="card">
+    <p>معماری مصرف باتری ماوس بی‌سیم، تفاوت</p>
+    <code>alkaline</code>
+    <p>با</p>
+    <code>lithium</code>
+    <p>حالت‌های</p>
+    <code>shutdown</code>
+    <code>sleep</code>
+    <code>hibernate</code>
+    <p>و تشخیص ویندوز با</p>
+    <code>powercfg</code>
+    <p>به‌علاوه متن آماده برای رئیس.</p>
+    <pre>D:\workshops\mouse-battery-fromzero</pre>
+  </div>
+</article>
+
+<article id="cat-cf">
+  <h2>کانفلوئنس</h2>
+  <div class="card">
+    <p>کارگاه‌های قبلی تو:</p>
+    <pre>D:\confluence-master-3
+D:\confluence-master-4</pre>
+    <p>این‌ها الگوی ترجمه و گام‌ریز را گذاشتند. کارگاه‌های جدید همان الگو را دارند.</p>
+  </div>
+</article>
+
+<article id="cat-dl">
+  <h2>دایلی‌لاگ</h2>
+  <div class="card">
+    <p>کارگاه خط‌به‌خط از قبل:</p>
+    <pre>D:\DailyLog-fromzero\workshop.html</pre>
+    <p>توجه: خود اپ دایلی‌لاگ تا ۱۳ آبان ۱۴۰۵ قفل است. روی آن تغییر نزن. فقط کارگاه آموزشی جدا را بخوان.</p>
+  </div>
+</article>
+
+<article id="cat-next">
+  <h2>کارگاه‌های بعدی پیشنهادی</h2>
+  <div class="card">
+    <p>اگر بخواهی همان سبک را ادامه بدهیم، این‌ها کاندید ریپوی جدا هستند:</p>
+    <p>یک: پایتون بیسیک خالص قبل از هر داده</p>
+    <p>دو: پاورکوئری و اکسل روی جدول تمیز</p>
+    <p>سه: اس‌کیو‌ال سرور و پاور بی‌آی</p>
+    <p>چهار: سرور اوبونتو و</p>
+    <code>nginx</code>
+    <p>جدا از کانفلوئنس</p>
+    <p>بگو کدام را اولویت بدهی تا همان‌قدر ریز ساخته شود.</p>
+  </div>
+</article>
+
+<article id="fit">
+  <h2>این کارگاه‌ها چطور به هم وصل می‌شوند</h2>
+  <div class="card">
+    <pre>مهارت مشترک
+├─ خواندن فایل / لاگ / خروجی
+├─ پاکسازی و یکدست‌سازی اسم‌ها
+├─ شمارش و شاخص
+└─ ارائه (داشبورد یا حرف با رئیس)
+
+شاخه داده ─ chat-data-fromzero
+شاخه سخت‌افزار روزمره ─ mouse-battery-fromzero
+شاخه مستندسازی تیمی ─ confluence-master-*
+شاخه عادت شخصی ─ DailyLog-fromzero (قفل اپ)</pre>
+    <p>لایه ۱. معماری ذهنی یکی است: ورودی کثیف → قانون تمیز → خروجی قابل توضیح.</p>
+    <p>لایه ۲. ابزار فرق می‌کند؛ الگوی فکر یکی می‌ماند.</p>
+  </div>
+</article>
+
+<article id="skills">
+  <h2>مهارت مشترک بین همه</h2>
+  <div class="card">
+    <p>هر بار که کار جدیدی می‌آید، همین سه سؤال را بپرس:</p>
+    <p>منبع داده کجاست و چه فرمی دارد</p>
+    <p>کدام فیلدها باید یکدست شوند</p>
+    <p>خروجی برای چه کسی و با چه فرمتی باید باشد</p>
+  </div>
+</article>
+
+<article id="canvas">
+  <h2>کنوس چیست</h2>
+  <div class="card">
+    <p>کنوس در کورسر یک پنل کنار چت است برای نمایش تعاملی داخل خود کورسر. فایل قابل ارسال برای رئیس یا همکار مثل</p>
+    <code>dashboard.html</code>
+    <p>نیست. وقتی می‌گوییم خروجی بده، معمولاً یعنی فایل اچ‌تی‌ام‌ال یا پی‌ان‌جی نمودار که در دانلودها یا ریپو است.</p>
+  </div>
+</article>
+
+<article id="htmlout">
+  <h2>خروجی واقعی تو چیست</h2>
+  <div class="card">
+    <p>برای تحلیل چت: فایل داشبورد که با مرورگر باز می‌شود و دکمه ذخیره دارد.</p>
+    <p>برای کارگاه‌ها: خود</p>
+    <code>index.html</code>
+    <p>را در مرورگر باز کن؛ تیک «خواندم» روی سیستم خودت در</p>
+    <code>localStorage</code>
+    <p>می‌ماند.</p>
+  </div>
+</article>
+
+<article id="paths">
+  <h2>مسیر محلی و گیت‌هاب</h2>
+  <div class="card">
+    <p class="do">محلی</p>
+    <pre>D:\workshops\tech-lab-map
+D:\workshops\chat-data-fromzero
+D:\workshops\mouse-battery-fromzero</pre>
+    <p class="do">گیت‌هاب بعد از پوش در همین کارت به‌روز می‌شود</p>
+    <pre id="gh-list">در حال آماده‌سازی آدرس‌ها…</pre>
+  </div>
+</article>
+
+<article id="shortcuts">
+  <h2>شورتکات‌های تکراری</h2>
+  <div class="card">
+    <p class="do">باز کردن کارگاه در مرورگر از پاورشل</p>
+    <pre>start D:\workshops\chat-data-fromzero\index.html</pre>
+    <p>Enter</p>
+    <pre>start D:\workshops\mouse-battery-fromzero\index.html</pre>
+    <p>Enter</p>
+    <pre>start D:\workshops\tech-lab-map\index.html</pre>
+    <p>Enter</p>
+    <p class="do">چک نسخه پایتون</p>
+    <pre>python --version</pre>
+    <p>Enter</p>
+    <p class="do">تشخیص بیدارشدن ویندوز</p>
+    <pre>powercfg -devicequery wake_armed</pre>
+    <p>Enter</p>
+  </div>
+</article>
+
+</main>
+</div>
+<script src="app.js"></script>
+</body>
+</html>
